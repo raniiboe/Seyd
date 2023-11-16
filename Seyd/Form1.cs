@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Seyd
 {
     public partial class Form1 : Form
     {
+        private List<(string, decimal)> owners = new List<(string, decimal)> ();
+        private List<decimal> ramLam = new List<decimal> ();
+        private List<decimal> eveLam = new List<decimal> ();
+        private List<decimal> eve = new List<decimal> ();
+        private List<decimal> sheep = new List<decimal> ();
+
         public Form1()
         {
             InitializeComponent();
@@ -44,10 +44,19 @@ namespace Seyd
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            var ownedPortion = OwnedPortion.Value;
+            OwnedPortion.Value = 0;
+            var ownerName = OwnerName.Text;
+            OwnerName.Text = "";
+            owners.Add((ownerName, ownedPortion));            
         }
 
         private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
         {
 
         }
