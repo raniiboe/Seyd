@@ -1,0 +1,10 @@
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\bin\Debug\Seyd.exe.config
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\bin\Debug\Seyd.exe
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\bin\Debug\Seyd.pdb
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.AssemblyReference.cache
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.Form1.resources
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.Properties.Resources.resources
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.GenerateResource.cache
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.CoreCompileInputs.cache
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.exe
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.pdb
