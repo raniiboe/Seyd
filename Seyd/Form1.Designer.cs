@@ -121,7 +121,6 @@
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Gimbur lomb";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AddRamLam
             // 
@@ -131,6 +130,7 @@
             this.AddRamLam.TabIndex = 7;
             this.AddRamLam.Text = "Add";
             this.AddRamLam.UseVisualStyleBackColor = true;
+            this.AddRamLam.Click += new System.EventHandler(this.AddRamLam_Click);
             // 
             // AddEveLamb
             // 
@@ -140,6 +140,7 @@
             this.AddEveLamb.TabIndex = 8;
             this.AddEveLamb.Text = "Add";
             this.AddEveLamb.UseVisualStyleBackColor = true;
+            this.AddEveLamb.Click += new System.EventHandler(this.AddEveLamb_Click);
             // 
             // RemoveEve
             // 
@@ -209,7 +210,6 @@
             this.EveLambWeight.Name = "EveLambWeight";
             this.EveLambWeight.Size = new System.Drawing.Size(120, 20);
             this.EveLambWeight.TabIndex = 14;
-            this.EveLambWeight.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // OwnerName
             // 
@@ -226,7 +226,6 @@
             this.OwnerList.Size = new System.Drawing.Size(121, 97);
             this.OwnerList.TabIndex = 16;
             this.OwnerList.UseCompatibleStateImageBehavior = false;
-            this.OwnerList.SelectedIndexChanged += new System.EventHandler(this.OwnerList_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -245,7 +244,6 @@
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 18;
             this.label5.Text = "Navn";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // OwnedPortion
             // 
@@ -298,7 +296,6 @@
             this.Solve.TabIndex = 23;
             this.Solve.Text = "Run solver";
             this.Solve.UseVisualStyleBackColor = true;
-            this.Solve.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 

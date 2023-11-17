@@ -17,29 +17,16 @@ namespace Seyd
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var weight = EveWeight.Value;
+            EveWeight.Value = 0;
+            EveList.Items.Add(weight.ToString());
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             deleteSelectedFromListView(EveLambList);
-        }
-
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -48,22 +35,12 @@ namespace Seyd
             OwnedPortion.Value = 0;
             var ownerName = OwnerName.Text;
             OwnerName.Text = "";
-            owners.Add((ownerName, ownedPortion));            
+            OwnerList.Items.Add(ownerName + ", " +  ownedPortion);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             deleteSelectedFromListView(OwnerList);
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OwnerList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void RemoveRamLam_Click(object sender, EventArgs e)
@@ -78,10 +55,26 @@ namespace Seyd
 
         private void deleteSelectedFromListView(ListView listView)
         {
-            foreach (ListViewItem item in listView.Items)
+            foreach (ListViewItem item in listView.SelectedItems)
             {
-                OwnerList.Items.Remove(item);
+                listView.Items.Remove(item);
             }
+        }
+
+        private void AddRamLam_Click(object sender, EventArgs e)
+        {
+            var weight = RamLamWeight.Value;
+            RamLamWeight.Value = 0;
+            ramLam.Add(weight);
+            RamLamList.Items.Add(weight.ToString());
+        }
+
+        private void AddEveLamb_Click(object sender, EventArgs e)
+        {
+            var weight = EveLambWeight.Value;
+            EveLambWeight.Value = 0;
+            eveLam.Add(weight);
+            EveLambList.Items.Add(weight.ToString());
         }
     }
 }
