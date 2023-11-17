@@ -296,6 +296,7 @@
             this.Solve.TabIndex = 23;
             this.Solve.Text = "Run solver";
             this.Solve.UseVisualStyleBackColor = true;
+            this.Solve.Click += new System.EventHandler(this.Solve_Click);
             // 
             // Form1
             // 

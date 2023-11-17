@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Seyd
 {
     public partial class Form1 : Form
     {
-        private List<(string, decimal)> owners = new List<(string, decimal)> ();
-        private List<decimal> ramLam = new List<decimal> ();
-        private List<decimal> eveLam = new List<decimal> ();
-        private List<decimal> eve = new List<decimal> ();
-        private List<decimal> sheep = new List<decimal> ();
-
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +29,7 @@ namespace Seyd
             OwnedPortion.Value = 0;
             var ownerName = OwnerName.Text;
             OwnerName.Text = "";
-            OwnerList.Items.Add(ownerName + ", " +  ownedPortion);
+            OwnerList.Items.Add(ownerName + ',' +  ownedPortion);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -65,7 +59,6 @@ namespace Seyd
         {
             var weight = RamLamWeight.Value;
             RamLamWeight.Value = 0;
-            ramLam.Add(weight);
             RamLamList.Items.Add(weight.ToString());
         }
 
@@ -73,8 +66,26 @@ namespace Seyd
         {
             var weight = EveLambWeight.Value;
             EveLambWeight.Value = 0;
-            eveLam.Add(weight);
             EveLambList.Items.Add(weight.ToString());
+        }
+
+        private void Solve_Click(object sender, EventArgs e)
+        {
+            var mountainDate = GetMountain();
+        }
+
+        private MountainData GetMountain()
+        {
+            var owners = OwnerList.Items.Cast<ListViewItem>().Select(x =>
+            {
+                var values = x.Text.Split(',');
+                return (values[0], decimal.Parse(values[1]));
+            }).ToArray();
+            
+            var eves = EveList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
+            var eveLambs = EveLambList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
+            var ramLambs = RamLamList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
+            return new MountainData(owners, eves, eveLambs, ramLambs);
         }
     }
 }
