@@ -29,7 +29,7 @@ namespace Seyd
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            deleteSelectedFromListView(EveLambList);
         }
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
@@ -53,12 +53,35 @@ namespace Seyd
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            deleteSelectedFromListView(OwnerList);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void OwnerList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemoveRamLam_Click(object sender, EventArgs e)
+        {
+            deleteSelectedFromListView(RamLamList); 
+        }
+
+        private void RemoveEve_Click(object sender, EventArgs e)
+        {
+            deleteSelectedFromListView(EveList);
+        }
+
+        private void deleteSelectedFromListView(ListView listView)
+        {
+            foreach (ListViewItem item in listView.Items)
+            {
+                OwnerList.Items.Remove(item);
+            }
         }
     }
 }

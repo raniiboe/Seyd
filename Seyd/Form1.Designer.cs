@@ -149,6 +149,7 @@
             this.RemoveEve.TabIndex = 9;
             this.RemoveEve.Text = "Remove";
             this.RemoveEve.UseVisualStyleBackColor = true;
+            this.RemoveEve.Click += new System.EventHandler(this.RemoveEve_Click);
             // 
             // RemoveRamLam
             // 
@@ -158,6 +159,7 @@
             this.RemoveRamLam.TabIndex = 10;
             this.RemoveRamLam.Text = "Remove";
             this.RemoveRamLam.UseVisualStyleBackColor = true;
+            this.RemoveRamLam.Click += new System.EventHandler(this.RemoveRamLam_Click);
             // 
             // RemoveEveLam
             // 
@@ -224,6 +226,7 @@
             this.OwnerList.Size = new System.Drawing.Size(121, 97);
             this.OwnerList.TabIndex = 16;
             this.OwnerList.UseCompatibleStateImageBehavior = false;
+            this.OwnerList.SelectedIndexChanged += new System.EventHandler(this.OwnerList_SelectedIndexChanged);
             // 
             // label4
             // 
