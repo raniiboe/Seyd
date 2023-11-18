@@ -1,21 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Seyd
 {
-    internal class MountainData
+    internal class Mountain
     {
         private (string, decimal)[] Owners;
         private decimal[] Eves;
         private decimal[] EveLambs;
         private decimal[] RamLambs;
 
-        public MountainData((string, decimal)[] owners, decimal[] eves, decimal[] eveLambs, decimal[] ramLambs)
+        public Mountain((string, decimal)[] owners, decimal[] eves, decimal[] eveLambs, decimal[] ramLambs)
         {
             Owners = owners;
             Eves = eves;
             EveLambs = eveLambs;
             RamLambs = ramLambs;
+        }
+
+        internal object Solve1()
+        {
+            throw new NotImplementedException();
         }
     }
 }

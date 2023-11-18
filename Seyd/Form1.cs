@@ -71,10 +71,11 @@ namespace Seyd
 
         private void Solve_Click(object sender, EventArgs e)
         {
-            var mountainDate = GetMountain();
+            var mountain = GetMountain();
+            var solution1 = mountain.Solve1();
         }
 
-        private MountainData GetMountain()
+        private Mountain GetMountain()
         {
             var owners = OwnerList.Items.Cast<ListViewItem>().Select(x =>
             {
@@ -85,7 +86,7 @@ namespace Seyd
             var eves = EveList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
             var eveLambs = EveLambList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
             var ramLambs = RamLamList.Items.Cast<ListViewItem>().Select(x => decimal.Parse(x.Text)).ToArray();
-            return new MountainData(owners, eves, eveLambs, ramLambs);
+            return new Mountain(owners, eves, eveLambs, ramLambs);
         }
     }
 }
