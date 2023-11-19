@@ -1,5 +1,6 @@
 import highspy
 import numpy as np
+
 def solve():
 	h = highspy.Highs()
 	inf = highspy.kHighsInf

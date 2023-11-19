@@ -25,10 +25,10 @@ namespace Seyd
             PythonEngine.Initialize();
             using (Py.GIL())
             {
-                var result = Py.Import("solver").InvokeMethod("solve");
-                Console.WriteLine(result.ToString());
+                var script = PyModule.Import("Solver");
+                var result = script.InvokeMethod("solve");
                 return result.ToString();
             }                
         }
-    }
+    }   
 }
