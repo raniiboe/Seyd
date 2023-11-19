@@ -72,6 +72,7 @@ namespace Seyd
         private void Solve_Click(object sender, EventArgs e)
         {
             var mountain = GetMountain();
+            mountain.Solve();
         }
 
         private Mountain GetMountain()

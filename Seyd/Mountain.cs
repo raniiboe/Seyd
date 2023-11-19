@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Python.Runtime;
 
 namespace Seyd
 {
@@ -16,6 +17,18 @@ namespace Seyd
             Eves = eves;
             EveLambs = eveLambs;
             RamLambs = ramLambs;
+        }
+
+        public string Solve()
+        {
+            Runtime.PythonDLL = @"C:\Users\Rani\Documents\GitHub\Seyd\Seyd\packages\pythonx86.3.12.0\tools\python312.dll";
+            PythonEngine.Initialize();
+            using (Py.GIL())
+            {
+                var result = Py.Import("solver").InvokeMethod("solve");
+                Console.WriteLine(result.ToString());
+                return result.ToString();
+            }                
         }
     }
 }

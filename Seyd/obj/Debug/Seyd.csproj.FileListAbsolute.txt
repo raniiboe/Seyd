@@ -8,3 +8,6 @@ C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.GenerateResource.
 C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.CoreCompileInputs.cache
 C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.exe
 C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.pdb
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\bin\Debug\Python.Runtime.dll
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\bin\Debug\Python.Runtime.xml
+C:\Users\Rani\Documents\GitHub\Seyd\Seyd\obj\Debug\Seyd.csproj.CopyComplete
